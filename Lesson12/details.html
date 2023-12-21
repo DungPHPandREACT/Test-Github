@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Chi tiết thông tin: <span id="name">Họ và tên</span></h1>
+
+		<script>
+			const listName = [
+				{
+					id: 1,
+					name: 'ABC',
+				},
+				{
+					id: 2,
+					name: 'XYZ',
+				},
+				{
+					id: 3,
+					name: 'Trần Văn A',
+				},
+			];
+			const urlParams = new URLSearchParams(window.location.search);
+			const id = urlParams.get('id');
+			const name = urlParams.get('name');
+
+			const element = listName.find((e) => e.id == id);
+
+			console.log(element);
+            if(element !== undefined){
+                document.getElementById('name').innerHTML = element.name
+            } else{
+                document.getElementById('name').innerHTML = 'Not Found'
+            }
+		</script>
+	</body>
+</html>

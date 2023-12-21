@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>
+			<input id="name" type="text" placeholder="Enter your name... " />
+			<button id="insert">Insert name</button>
+		</div>
+
+		<h1>Các tên đã được thêm</h1>
+		<ul id="renader-name">
+			<li>Nguyễn Văn A</li>
+		</ul>
+
+		<script>
+			let listName = [];
+
+			if (localStorage.getItem('name') !== null) {
+				listName = JSON.parse(localStorage.getItem('name'));
+			}
+
+			for (let element of listName) {
+				const tagLi = document.createElement('li');
+				tagLi.innerHTML = `<a href="./details.html?name=${element}">${element}</a>`;
+
+				document.getElementById('renader-name').appendChild(tagLi);
+			}
+
+			document.getElementById('insert').onclick = function () {
+				const name = document.getElementById('name').value;
+				listName.push(name);
+				localStorage.setItem('name', JSON.stringify(listName));
+				const tagLi = document.createElement('li');
+				tagLi.innerHTML = `<a href="./details.html?name=${name}">${name}</a>`;
+				document.getElementById('renader-name').appendChild(tagLi);
+			};
+		</script>
+	</body>
+</html>

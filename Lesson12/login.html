@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<input type="text" id="name" />
+		<button id="btn-login">Đăng nhập</button>
+
+		<script>
+			document.getElementById('btn-login').onclick = () => {
+				const name = document.getElementById('name').value;
+				if (name.length >= 4) {
+					alert('Đăng nhập thành công');
+					location.href = './index.html';
+				} else {
+					alert('Tên nhập chưa đủ mạnh');
+				}
+			};
+		</script>
+	</body>
+</html>

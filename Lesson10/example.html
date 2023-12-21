@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Bài 1</h1>
+		<input type="email" id="my-email" />
+
+		<script>
+			document.getElementById('my-email').oninput = function () {
+				const value = document.getElementById('my-email').value;
+
+				if (value.includes('@gmail.com')) {
+					console.log('email đúng định dạng');
+				} else {
+					console.log('email chưa đúng định dạng');
+				}
+			};
+		</script>
+
+		<h2>Bài 2</h2>
+		<input type="number" id="number-a" />
+		<input type="number" id="number-b" />
+
+		<button id="add">Cộng</button>
+		<button id="sub">Trừ</button>
+
+		<script>
+			let a = document.getElementById('number-a').value;
+			a = Number(a);
+			let b = document.getElementById('number-b').value;
+			b = Number(b);
+			document.getElementById('add').onclick = function () {
+				alert(a + b);
+			};
+			document.getElementById('sub').onclick = function () {
+				alert(a - b);
+			};
+		</script>
+
+		<h1>Bài 3</h1>
+		<img
+			id="img"
+			src="https://images.pexels.com/photos/1738675/pexels-photo-1738675.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+			width="100"
+			height="100"
+		/>
+        <!-- '100' + 10 => '100px10' -->
+		<button id="increment">Tăng kích thước</button>
+		<button id="decrement">Giảm kích thước</button>
+
+		<script>
+			document.getElementById('increment').onclick = function () {
+				console.log(document.getElementById('img').width);
+				document.getElementById('img').width =
+					document.getElementById('img').width + 10;
+			};
+		</script>
+	</body>
+</html>

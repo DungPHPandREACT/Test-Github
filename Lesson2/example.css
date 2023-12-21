@@ -1,0 +1,53 @@
+.heading {
+	text-align: center;
+}
+
+.description {
+	text-align: center;
+}
+
+.row {
+	text-align: center;
+}
+
+.form-group {
+	background: gray;
+	width: 50%;
+	/* text-align: center; */
+	margin: auto;
+}
+
+input {
+	height: 35px !important;
+	width: 400px !important;
+	margin: 8px;
+}
+
+select {
+	height: 41px !important;
+	width: 408px !important;
+	margin: 8px;
+}
+
+textarea {
+	width: 830px;
+	height: 80px;
+}
+
+button {
+	width: 840px;
+	height: 40px;
+	margin-bottom: 12px;
+	margin-top: 8px;
+	background: black;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bolder;
+	border: none;
+}
+
+.description {
+	width: 670px;
+	margin: auto;
+	margin-bottom: 24px;
+}

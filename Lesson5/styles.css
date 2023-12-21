@@ -1,0 +1,41 @@
+body {
+	background: red;
+}
+
+/* 400px < width device < 512px */
+
+@media (max-width: 512px) and (min-width: 400px) {
+	body {
+		background: blue;
+	}
+}
+
+.btn.btn-primary {
+	background: red;
+}
+
+.box-item {
+	background: red;
+	width: 95%;
+	height: 150px;
+	padding: 8px;
+	border: 1px solid black;
+}
+
+/* .container-box {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+} */
+
+/* @media (max-width: 992px) {
+	.box-item {
+		width: 40%;
+	}
+}
+
+@media (max-width: 576px) {
+	.box-item {
+		width: 100%;
+	}
+} */

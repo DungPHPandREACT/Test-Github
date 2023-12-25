@@ -1,6 +1,5 @@
 const Product = (props) => {
-	const { title, isShowTagSale, isShowRate, textButton, price1, price2, type } =
-		props;
+	const { title, isShowTagSale, isShowRate, price1, price2, type } = props;
 
 	const renderPrice = () => {
 		if (type === 'type1') {
@@ -68,7 +67,7 @@ const Product = (props) => {
 				<div className='card-footer p-4 pt-0 border-top-0 bg-transparent'>
 					<div className='text-center'>
 						<a className='btn btn-outline-dark mt-auto' href='#'>
-							{textButton}
+							{type === 'type1' ? 'View options' : 'Add to cart'}
 						</a>
 					</div>
 				</div>

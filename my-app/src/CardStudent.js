@@ -1,10 +1,8 @@
-const CardStudent = (properties) => {
-	console.log('list: ', properties.list);
+import PropTypes from 'prop-types';
 
-	const cssInline = {
-		color: 'red',
-		fontSize: '14px',
-	};
+const CardStudent = (props) => {
+	const { name = 'Trần Văn A', age = 15 } = props;
+	console.log('giá trị children: ', props.children);
 	return (
 		<div className='card'>
 			<h1
@@ -13,12 +11,23 @@ const CardStudent = (properties) => {
 					fontSize: '14px',
 				}}
 			>
-				Username: {properties.name}
+				Username: {name}
 			</h1>
-			<h1>Age: {properties.age}</h1>
-			<h1>Gender: </h1>
+			{props.children}
+			<h1>Age: {age}</h1>
 		</div>
 	);
 };
+// // Cách 1:
+// // Khởi tạo kiểu dữ liệu cho props
+// CardStudent.propTypes = {
+// 	name: PropTypes.string.isRequired,
+// 	age: PropTypes.number,
+// };
+// // Khởi tạo giá trị default cho props
+// CardStudent.defaultProps = {
+// 	name: 'Trần Văn A',
+// 	age: 15,
+// };
 
 export default CardStudent;

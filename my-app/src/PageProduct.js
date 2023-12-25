@@ -74,12 +74,16 @@ const PageProduct = () => {
 	const jsxListProducts = listProducts.map((product, index) => {
 		return (
 			<Product
+				// c1
 				title={product.title}
 				isShowTagSale={product.isShowTagSale}
 				isShowRate={product.isShowRate}
 				price1={product.price1}
 				price2={product.price2}
 				type={product.type}
+
+				// c2
+				// {...product}
 			/>
 		);
 	});

@@ -40,10 +40,10 @@ function App() {
 				age={listStudent[2].age}
 			></CardStudent>
 			<CardStudent name='Huy 4' list={listStudent} /> */}
-				{/* <PageProduct /> */}
+				<PageProduct />
 			</div>
-			<Test1 />
-			<Test2 />
+			{/* <Test1 />
+			<Test2 /> */}
 		</>
 	);
 }

@@ -2,6 +2,8 @@ import './App.css';
 import CardStudent from './CardStudent';
 import PageProduct from './PageProduct';
 import ProductItem from './ProductItem';
+import Test1 from './Test1';
+import Test2 from './Test2';
 
 function App() {
 	const age = 5;
@@ -38,9 +40,10 @@ function App() {
 				age={listStudent[2].age}
 			></CardStudent>
 			<CardStudent name='Huy 4' list={listStudent} /> */}
-				<PageProduct />
+				{/* <PageProduct /> */}
 			</div>
-			<h1></h1>
+			<Test1 />
+			<Test2 />
 		</>
 	);
 }

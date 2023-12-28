@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import Example from './Example';
+import Traffic from './Traffic';
 
 function App() {
 	// let number = 0;
@@ -22,7 +23,7 @@ function App() {
 	// 	console.log('number: ', number);
 	// };
 
-	// let [number, setNumber] = useState(0); //arr 
+	// let [number, setNumber] = useState(0); //arr
 	// let number = useState(90)[0]; //arr1 => arr1[0]
 	// let setNumber = useState(90)[1]; //arr2 => arr2[1]
 
@@ -55,7 +56,9 @@ function App() {
 			<h1>Number: {number}</h1>
 			<button onClick={handleDecrement}>Decrement</button> */}
 
-			<Example />
+			{/* <Example /> */}
+
+			<Traffic />
 		</div>
 	);
 }

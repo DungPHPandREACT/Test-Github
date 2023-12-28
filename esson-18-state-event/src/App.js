@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import Example from './Example';
 
 function App() {
 	// let number = 0;
@@ -21,22 +22,22 @@ function App() {
 	// 	console.log('number: ', number);
 	// };
 
-	// let [number, setNumber] = useState(0);
-	let number = useState(90)[0];
-	let setNumber = useState(90)[1];
+	// let [number, setNumber] = useState(0); //arr 
+	// let number = useState(90)[0]; //arr1 => arr1[0]
+	// let setNumber = useState(90)[1]; //arr2 => arr2[1]
 
-	const handleIncrement = () => {
-		setNumber(number + 1);
-	};
+	// const handleIncrement = () => {
+	// 	setNumber(number + 1);
+	// };
 
-	const handleDecrement = () => {
-		setNumber(number - 1);
-	};
+	// const handleDecrement = () => {
+	// 	setNumber(number - 1);
+	// };
 
-	console.log('render');
+	// console.log('render');
 
 	return (
-		<div className='App'>
+		<div className='app'>
 			{/* <h1 onClick={handleClick}>Test event onclick</h1>
 			<button
 				onClick={() => {
@@ -50,9 +51,11 @@ function App() {
 
 			<button onClick={handleIncrement}>Increment</button> */}
 
-			<button onClick={handleIncrement}>Increment</button>
+			{/* <button onClick={handleIncrement}>Increment</button>
 			<h1>Number: {number}</h1>
-			<button onClick={handleDecrement}>Decrement</button>
+			<button onClick={handleDecrement}>Decrement</button> */}
+
+			<Example />
 		</div>
 	);
 }

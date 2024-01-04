@@ -1,0 +1,1 @@
+// Nơi chứa các hàm dùng chung ở nhiều file
